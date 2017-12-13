@@ -1,8 +1,7 @@
-package dmoj;
-
+package ccc2005;
 import java.util.Scanner;
 
-public class SnowCalls {
+public class S1_SnowCalls {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
