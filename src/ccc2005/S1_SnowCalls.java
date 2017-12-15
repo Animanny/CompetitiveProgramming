@@ -1,4 +1,5 @@
 package ccc2005;
+
 import java.util.Scanner;
 
 public class S1_SnowCalls {
@@ -8,38 +9,66 @@ public class S1_SnowCalls {
 		Scanner sc = new Scanner(System.in);
 		int b = sc.nextInt();
 		for (int x = 0; x <= b; x++) {
-			String in = sc.nextLine();
-			String out = null;
-			for (int i = 0; i <= 10; i++) {
-				if (String.valueOf(in.charAt(i)) == "2" || String.valueOf(in.charAt(i)) == "A"
-						|| String.valueOf(in.charAt(i)) == "B" || String.valueOf(in.charAt(i)) == "C") {
-					out = out + "2";
-				} else if (String.valueOf(in.charAt(i)) == "3" || String.valueOf(in.charAt(i)) == "D"
-						|| String.valueOf(in.charAt(i)) == "E" || String.valueOf(in.charAt(i)) == "F") {
-					out = out + "3";
-				} else if (String.valueOf(in.charAt(i)) == "4" || String.valueOf(in.charAt(i)) == "G"
-						|| String.valueOf(in.charAt(i)) == "H" || String.valueOf(in.charAt(i)) == "I") {
-					out = out + "4";
-				} else if (String.valueOf(in.charAt(i)) == "5" || String.valueOf(in.charAt(i)) == "J"
-						|| String.valueOf(in.charAt(i)) == "K" || String.valueOf(in.charAt(i)) == "L") {
-					out = out + "5";
-				} else if (String.valueOf(in.charAt(i)) == "6" || String.valueOf(in.charAt(i)) == "M"
-						|| String.valueOf(in.charAt(i)) == "N" || String.valueOf(in.charAt(i)) == "O") {
-					out = out + "6";
-				} else if (String.valueOf(in.charAt(i)) == "7" || String.valueOf(in.charAt(i)) == "P"
-						|| String.valueOf(in.charAt(i)) == "Q" || String.valueOf(in.charAt(i)) == "R"
-						|| String.valueOf(in.charAt(i)) == "S") {
-					out = out + "7";
-				} else if (String.valueOf(in.charAt(i)) == "8" || String.valueOf(in.charAt(i)) == "T"
-						|| String.valueOf(in.charAt(i)) == "U" || String.valueOf(in.charAt(i)) == "V") {
-					out = out + "8";
-				} else if (String.valueOf(in.charAt(i)) == "9" || String.valueOf(in.charAt(i)) == "W"
-						|| String.valueOf(in.charAt(i)) == "X" || String.valueOf(in.charAt(i)) == "Y"
-						|| String.valueOf(in.charAt(i)) == "Z") {
-					out = out + "9";
-				} else if (i == 3 || i == 7) {
-					out += "-";
+			String in = sc.next();
+			String out = "";
+			int current = 0;
+			for (int i = 0; i < in.length(); i++) {
+
+				if (current < 10) {
+
+					char thing = in.charAt(i);
+					if (Character.toString(in.charAt(i)).equals("2") || Character.toString(in.charAt(i)).equals("A")
+							|| Character.toString(in.charAt(i)).equals("B")
+							|| Character.toString(in.charAt(i)).equals("C")) {
+						out = out + "2";
+					} else if (Character.toString(in.charAt(i)).equals("3")
+							|| Character.toString(in.charAt(i)).equals("D")
+							|| Character.toString(in.charAt(i)).equals("E")
+							|| Character.toString(in.charAt(i)).equals("F")) {
+						out = out + "3";
+					} else if (Character.toString(in.charAt(i)).equals("4")
+							|| Character.toString(in.charAt(i)).equals("G")
+							|| Character.toString(in.charAt(i)).equals("H")
+							|| Character.toString(in.charAt(i)).equals("I")) {
+						out = out + "4";
+					} else if (Character.toString(in.charAt(i)).equals("5")
+							|| Character.toString(in.charAt(i)).equals("J")
+							|| Character.toString(in.charAt(i)).equals("K")
+							|| Character.toString(in.charAt(i)).equals("L")) {
+						out = out + "5";
+					} else if (Character.toString(in.charAt(i)).equals("6")
+							|| Character.toString(in.charAt(i)).equals("M")
+							|| Character.toString(in.charAt(i)).equals("N")
+							|| Character.toString(in.charAt(i)).equals("O")) {
+						out = out + "6";
+					} else if (Character.toString(in.charAt(i)).equals("7")
+							|| Character.toString(in.charAt(i)).equals("P")
+							|| Character.toString(in.charAt(i)).equals("Q")
+							|| Character.toString(in.charAt(i)).equals("R")
+							|| Character.toString(in.charAt(i)).equals("S")) {
+						out = out + "7";
+					} else if (Character.toString(in.charAt(i)).equals("8")
+							|| Character.toString(in.charAt(i)).equals("T")
+							|| Character.toString(in.charAt(i)).equals("U")
+							|| Character.toString(in.charAt(i)).equals("V")) {
+						out = out + "8";
+					} else if (Character.toString(in.charAt(i)).equals("9")
+							|| Character.toString(in.charAt(i)).equals("W")
+							|| Character.toString(in.charAt(i)).equals("X")
+							|| Character.toString(in.charAt(i)).equals("Y")
+							|| Character.toString(in.charAt(i)).equals("Z")) {
+						out = out + "9";
+					} else if (i == 4 || i == 7) {
+						out= out + "-";
+					} else {
+
+					}
+
+				} else {
+
 				}
+
+				current += 1;
 			}
 			System.out.println(out);
 
