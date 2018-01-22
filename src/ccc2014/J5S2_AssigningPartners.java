@@ -20,7 +20,7 @@ public class J5S2_AssigningPartners {
 		}
 		for (int i = 0; i < n; i++) {
 			names2.add(sc.next());
-		}
+		}//
 
 		for (int i = 0; i < n; i++) {
 			String currentPartner = names2.get(i);
