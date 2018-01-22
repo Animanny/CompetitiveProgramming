@@ -29,6 +29,9 @@ public class J5S2_AssigningPartners {
 			
 			if (currentPartner.equals(names1.get(names2.indexOf(currentPer)))){
 				
+			} else if (names2.get(i).equals(names1.get(i))){
+				currentState = false;
+				
 			} else {
 				currentState = false;
 			}
