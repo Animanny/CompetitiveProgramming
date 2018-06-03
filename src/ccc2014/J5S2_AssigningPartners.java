@@ -20,21 +20,21 @@ public class J5S2_AssigningPartners {
 		}
 		for (int i = 0; i < n; i++) {
 			names2.add(sc.next());
-		}//
+		} //
 
 		for (int i = 0; i < n; i++) {
 			String currentPartner = names2.get(i);
 			String currentPer = names1.get(i);
-			
-			
-			if (currentPartner.equals(names1.get(names2.indexOf(currentPer)))){
-				
-			} else if (names2.get(i).equals(names1.get(i))){
+
+			if (names2.get(i).equals(names1.get(i))) {
 				currentState = false;
-				
 			} else {
-				currentState = false;
+				if (currentPartner.equals(names1.get(names2.indexOf(currentPer)))) {
+				} else {
+					currentState = false;
+				}
 			}
+
 		}
 
 		if (currentState) {
